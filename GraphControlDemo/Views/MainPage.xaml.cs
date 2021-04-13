@@ -11,20 +11,19 @@ namespace GraphControlDemo.Views
 {
     public sealed partial class MainPage : Page
     {
+        // 文档地址：https://docs.microsoft.com/zh-cn/graph/api/overview?view=graph-rest-beta
         private MainViewModel ViewModel
         {
             get { return ViewModelLocator.Current.MainViewModel; }
         }
         public ObservableCollection<DriveItem> DriveItems { get; set; } = new ObservableCollection<DriveItem>();
 
-        
-
         private string folderId { get; set; }
         public MainPage()
         {
             InitializeComponent();
         }
-
+        
         private async void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             DriveItems.Clear();
